@@ -1,0 +1,169 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Center the game on the screen */
+.center-outer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 32px 24px;
+  text-align: center;
+  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+  background: #1b263bcc;
+  border-radius: 18px;
+  box-shadow: 0 2px 20px #0004;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  letter-spacing: 2px;
+  font-size: 2.2em;
+  margin-bottom: 18px;
+  background: linear-gradient(90deg,#a9d6e5,#89c2d9,#468faf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.board {
+  margin: 20px 0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.tile {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #415a77;
+  margin: 2px;
+  font-size: 2em;
+  line-height: 48px;
+  text-align: center;
+  background: #16213e;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px #0003;
+}
+
+.tile.green, .key.green {
+  background: #6aaa64;
+  color: #fff;
+  border-color: #6aaa64;
+}
+
+.tile.yellow, .key.yellow {
+  background: #c9b458;
+  color: #fff;
+  border-color: #c9b458;
+}
+
+.tile.gray, .key.gray {
+  background: #787c7e;
+  color: #fff;
+  border-color: #787c7e;
+}
+
+.input-area {
+  margin: 18px 0;
+}
+
+input[type="text"] {
+  font-size: 1.2em;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #415a77;
+  background: #0d1b2a;
+  color: #fff;
+  width: 150px;
+}
+
+input[type="text"]::placeholder {
+  color: #a9d6e5;
+}
+
+button {
+  font-size: 1.2em;
+  padding: 8px 22px;
+  border-radius: 6px;
+  border: none;
+  background: #468faf;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #89c2d9;
+}
+
+.message {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #fcbf49;
+}
+
+/* Keyboard styles */
+.keyboard {
+  margin-top: 16px;
+  user-select: none;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.key {
+  background: #415a77;
+  color: #fff;
+  border: none;
+  margin: 2px;
+  padding: 0 12px;
+  height: 44px;
+  min-width: 40px;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  box-shadow: 0 1px 3px #0002;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.key:active {
+  background: #1b263b;
+}
+
+.enter-key {
+  min-width: 60px;
+  background: #6aaa64;
+  color: #fff;
+}
+
+.backspace-key {
+  min-width: 60px;
+  background: #c9b458;
+  color: #fff;
+}
